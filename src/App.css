@@ -2,12 +2,16 @@
   text-align: center;
   height: 100vh;
 }
+::-webkit-scrollbar {
+  width: 0px; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
+}
 
 .header {
   display: flex;
-  font-size: 30px;
+  font-size: 40px;
   font-weight: bold;
-  height: 160px;
+  height: 100vh;
   width: 100%;
   justify-content: center;
   align-items: center;
@@ -16,31 +20,77 @@
 }
 .finish {
   background: red;
+  font-size: 30px;
+  color: white;
+  height: 20vh;
+  transition: all 1.2s ease-in-out;
 }
 .start {
   background: blue;
+  transition: all 1.2s ease-in-out;
 }
 
 .content-box {
   display: flex;
-  height: 300px;
+  height: 70vh;
   justify-content: center;
   align-items: center;
   font-weight: bold;
   background: rgba(0, 0, 255, 0.219);
   border-bottom: 2px solid black;
 }
+.outerBox {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin: auto;
+}
+.innerBox {
+  display: flex;
+  border: 1px solid rgb(27, 27, 131);
+  background: rgba(128, 0, 128, 0.205);
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  margin: auto;
+  width: 40%;
+}
+.Lbox-fin {
+  transition: all 2.2s ease-in-out;
+}
+.Lbox-start {
+  transition: all 2.2s ease-in-out;
+  transform: translate(-200px, 200px) scale(0.5, 0.5);
+}
+
+.Rbox-fin {
+  transition: all 2.2s ease-in-out;
+}
+.Rbox-start {
+  transition: all 2.2s ease-in-out;
+  transform: translate(200px, 200px) scale(0.5, 0.5);
+}
+
+.innerBox:hover {
+  cursor: pointer;
+  background: rgba(128, 0, 128, 0.805);
+}
 
 .footer {
-  position: absolute;
   bottom: 0;
   border-top: 2px solid black;
-  height: 50px;
+  height: 10vh;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   background: rgba(255, 255, 0, 0.288);
+}
+.foot-fin {
+}
+.foot-start {
+  transform: translateY(10vh);
 }
 
 .innerFooter {

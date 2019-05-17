@@ -1,24 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+import useInterval from "./useInterval";
 
 function App() {
+  const [transition, setTransition] = useState(false);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className={"header " + (transition ? "finish" : "start")}>Hello</div>
+      <div className="content-box">
+        <button onClick={() => setTransition(!transition)}>
+          Click to set Transition as opposite
+        </button>
+      </div>
+      <div className="footer">
+        <div className="innerFooter">Footer</div>
+      </div>
     </div>
   );
 }
